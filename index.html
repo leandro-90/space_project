@@ -2,30 +2,32 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Um pequeno projeto sobre o espaço e suas particularidades">
   <meta name="keywords" content="HTML5 | CSS3 | JavaScript">
   <meta name="author" content="Leandro - Marcela - Nicolas - Wilson - Wederson">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow&family=Bellefair&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Space tourism website</title>
-
 </head>
 
 <body>
   <header class="header">
+    <img class="nav__logo" src="assets/shared/logo.svg" alt="Ícone de estrela.">
+    <span class="header__line"></span>
     <nav class="nav">
-      <img class="nav__image" src="assets/shared/logo.svg" alt="Ícone de estrela.">
       <ul class="nav__links">
-        <li class="nav__link"><a href="#">00 Home</a></li>
-        <li class="nav__link"><a href="#">01 Destination</a></li>
-        <li class="nav__link"><a href="#">02 Crew</a></li>
-        <li class="nav__link"><a href="#">03 Technology</a></li>
+        <li class="nav__link nav__link--active"><a href="#"><b>00</b> Home</a></li>
+        <li class="nav__link"><a href="#"><b>01</b> Destination</a></li> 
+        <li class="nav__link"><a href="#"><b>02</b> Crew</a></li>
+        <li class="nav__link"><a href="#"><b>03</b> Technology</a></li>
       </ul>
     </nav>
-    <div>
+    <div class="header__content">
       <p class="header__text-top">So, you want to travel to</p>
       <h1 class="header__title">Space</h1>
       <p class="header__description">
@@ -33,43 +35,25 @@
         outer space and not hover kind of on the edge of it. Well sit back, and relax
         because we’ll give you a truly out of this world experience!
       </p>
-      <div class="explore">Explore</div>
     </div>
+    <a href="#" class="header__explore">Explore</a>
   </header>
   <main>
     <section class="planets">
       <div class="planets__popup">
         <p class="planets__title"></p>
         <div class="planets__background-list">
-          <input class="planets__search" type="text" minlength="5" maxlength="10" placeholder="Search planets...">
+          
           <ul class="planetsList">
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
-            <li class="planetsList__item">
-
-            </li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
+            <li class="planetsList__item"></li>
           </ul>
         </div>
       </div>
@@ -78,9 +62,6 @@
         <p></p>
         <h1></h1>
         <div class="planets__grid">
-          <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-          <!-- Recomendação: recomendo usar grid para este elemento, baseado na imagem da preview, vocês podem pegar uma base e saber do que estou falando. Sigam este caminho para encontrar a imagem da preview da página [ assets\planets\planets-preview.png ] -->
-          <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
           <div class="planets__gridElement">
             <img src="" alt="">
             <p></p>
