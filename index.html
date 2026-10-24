@@ -10,7 +10,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow&family=Bellefair&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow&family=Bellefair&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
@@ -22,7 +24,7 @@
     <nav class="nav">
       <ul class="nav__links">
         <li class="nav__link nav__link--active"><a href="#"><b>00</b> Home</a></li>
-        <li class="nav__link"><a href="#"><b>01</b> Destination</a></li> 
+        <li class="nav__link"><a href="#"><b>01</b> Destination</a></li>
         <li class="nav__link"><a href="#"><b>02</b> Crew</a></li>
         <li class="nav__link"><a href="#"><b>03</b> Technology</a></li>
       </ul>
@@ -39,81 +41,82 @@
     <a href="#" class="header__explore">Explore</a>
   </header>
   <main>
-    <section class="planets">
-      <div class="planets__popup">
-        <p class="planets__title"></p>
-        <div class="planets__background-list">
-          
-          <ul class="planetsList">
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-            <li class="planetsList__item"></li>
-          </ul>
+    <!-- -------------------------------------------- seção destination ------------------------------------------------------------- -->
+    <section class="destination">
+      <div class="destination-content">
+        <div class="destination-searchPlanets__popup">
+          <div class="destination-nameList">
+            <p class="destination-nameList__planets">PLANETS</p>
+            <p class="destination-nameList__stars">STARS</p>
+          </div>
+          <!-- Campo de pesquisa da lista PLANETS e STARS. -->
+          <search class="destination-planets__search">
+            <label class="destination-planets__iconeSearch" for="search">
+              <!-- O ícone de pesquisa já está disponível no folder destination. -->
+              <input class="destination-inputSearch" id="search" type="search" autocomplete="off" minlength="5"
+                maxlength="10" placeholder="Search planets..">
+              <!-- Leandro: Preciso lembrar de colocar no JS a pesquisa do usuário no campo de leitura mesmo com o nome dos planetas e estrelas em português!!! -->
+            </label>
+          </search>
+          <!-- Pesquisa de planetas por opções selecionadas. -->
+          <select>
+            <!-- Seleção de planetas. -->
+            <option value="All types">All types</option>
+            <option value="mars">mars</option>
+            <option value="earth">earth</option>
+            <option value="jupiter">jupiter</option>
+            <option value="saturn">saturn</option>
+            <option value="uranus">uranus</option>
+            <option value="neptune">neptune</option>
+            <option value="pluto">pluto</option>
+          </select>
+          <select>
+            <!-- Seleção por ordem. -->
+            <option value="Sort by">Sort by</option>
+            <option value="alphabetical order">alphabetical order</option>
+            <option value="ascending order">ascending order of planets</option>
+            <option value="descending order of planets">descending order of planets</option>
+          </select>
+          <nav class="destination-nav__listPlanets">
+            <!-- Lista de planets -->
+            <div>
+              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-mars.png"
+                  alt="Imagem de marte">
+                <p>MARS</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-earth.png" alt="">
+                <p>EARTH</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-jupiter.png" alt="">
+                <p>JUPITER</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-saturn.png" alt="">
+                <p>SATURN</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-uranus.webp" alt="">
+                <p>URANUS</p>
+              </li>
+            </div>
+          </nav>
         </div>
-      </div>
-      <img src="" alt="">
-      <div class="">
-        <p></p>
-        <h1></h1>
-        <div class="planets__grid">
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div class="planets__gridElement">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
+        <img src="assets/destination/image-mars.png" alt="">
+        <!-- Aqui vai ficar a imagem do planeta atual. -->
+        <div class="destination-grid__dataPlanet">
+          <!-- Aqui ficará os dados do planeta atual. -->
         </div>
       </div>
     </section>
+    <!-- --------------------------------------------- seção stars ------------------------------------------------------------ -->
     <section class="stars"></section>
+    <!-- --------------------------------------------- seção technology ------------------------------------------------------------ -->
     <section class="technology"></section>
   </main>
 </body>
