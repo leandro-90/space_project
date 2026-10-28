@@ -47,7 +47,7 @@
         <div class="destination-searchPlanets__popup">
           <div class="destination-nameList">
             <p class="destination-nameList__planets">PLANETS</p>
-            <p class="destination-nameList__stars">STARS</p>
+            <p class="destination-nameList__plantes">STARS</p>
           </div>
           <!-- Campo de pesquisa da lista PLANETS e STARS. -->
           <search class="destination-planets__search">
@@ -107,15 +107,102 @@
             </div>
           </nav>
         </div>
-        <img src="assets/destination/image-mars.png" alt="">
+        <!-- ----------------------------------------------------------------------------------- -->
+
+
+
+
+        <div class="destination-searchStars__popup">
+          <div class="destination-nameList">
+            <p class="destination-nameList__stars">PLANETS</p>
+            <p class="destination-nameList__stars">STARS</p>
+          </div>
+          <!-- Campo de pesquisa da lista PLANETS e STARS. -->
+          <search class="destination-stars__search">
+            <label class="destination-stars__iconeSearch" for="search">
+              <!-- O ícone de pesquisa já está disponível no folder destination. -->
+              <input class="destination-inputSearch" id="search" type="search" autocomplete="off"
+                placeholder="Search stars..">
+              <!-- Leandro: Preciso lembrar de colocar no JS a pesquisa do usuário no campo de leitura mesmo com o nome dos planetas e estrelas em português!!! -->
+            </label>
+          </search>
+          <!-- Pesquisa de estrelas por opções selecionadas. -->
+          <select>
+            <!-- Seleção de estrelas. -->
+            <option value="All types">All types</option>
+            <option value="sírius">sírius</option>
+            <option value="arcturus">arcturus</option>
+            <option value="sol">sol</option>
+            <option value="rigel">rigel</option>
+            <option value="procyon">procyon</option>
+          </select>
+          <select>
+            <!-- Seleção por ordem. -->
+            <option value="Sort by">Sort by</option>
+            <option value="alphabetical order">alphabetical order</option>
+            <option value="ascending order">ascending order of stars</option>
+            <option value="descending order of stars">descending order of stars</option>
+          </select>
+          <nav class="destination-nav__listStars">
+            <!-- Lista de estrelas -->
+            <div>
+              <li class="destination-nav__listStars-item"><img
+                  src="assets/destination/imagem_png_estrela_sírius_cópia.webp" alt="Imagem de sírius">
+                <p>SÍRiUS</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_arcturus.webp"
+                  alt="Imagem de arcturus">
+                <p>ARCTURUS</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_sol.png"
+                  alt="imagem do sol">
+                <p>SOL</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_rigel.webp"
+                  alt="Imagem da estrela rigel">
+                <p>RIGEL</p>
+              </li>
+            </div>
+            <div>
+              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_procyon.webp"
+                  alt="Imagem da estrela procyon">
+                <p>PROCYON</p>
+              </li>
+            </div>
+          </nav>
+        </div>
+        <img src="assets/destination/imagem_png_estrela_sírius_cópia.webp" alt="Foto ilustrativa da estrela sírius">
         <!-- Aqui vai ficar a imagem do planeta atual. -->
-        <div class="destination-grid__dataPlanet">
+        <div class=" destination-grid__dataStars">
           <!-- Aqui ficará os dados do planeta atual. -->
+          <div>
+            <p>04 / STARS</p>
+            <h1></h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, odit inventore dolores sapiente
+              sunt,
+              soluta explicabo quas velit cupiditate maiores temporibus asperiores, beatae facilis accusantium id
+              atque
+              alias reiciendis in.
+            </p>
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
         </div>
       </div>
     </section>
-    <!-- --------------------------------------------- seção stars ------------------------------------------------------------ -->
-    <section class="stars"></section>
+    <!-- --------------------------------------------- seção crew ------------------------------------------------------------ -->
+    <section class="crew"></section>
     <!-- --------------------------------------------- seção technology ------------------------------------------------------------ -->
     <section class="technology"></section>
   </main>
