@@ -19,7 +19,7 @@ a {
 html {
   height: 100%;
 }
-.body {
+body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
@@ -34,13 +34,7 @@ html {
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto 1fr;
   column-gap: clamp(1.5rem, 3vw, 3.5rem);
-  padding-left: clamp(2rem, 8.5vw, 7.5rem);
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr;
-  column-gap: clamp(1.5rem, 3vw, 3.5rem);
-  padding-left: clamp(2rem, 8.5vw, 7.5rem);
+  padding: 125px 0 0 165px;
   background-image: url("../assets/home/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
@@ -74,44 +68,21 @@ html {
 .nav {
   grid-column: 3;
   grid-row: 1;
-  margin-top: 2.5rem;
+
   height: 96px;
-  grid-column: 3;
-  grid-row: 1;
-  margin-top: 2.5rem;
-  height: 96px;
-  padding-left: clamp(2rem, 7vw, 7.5rem);
-  padding-right: clamp(2rem, 7vw, 7.5rem);
-  padding-right: clamp(2rem, 7vw, 7.5rem);
+  padding-left: 159px;
+  padding-right: 64px;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  z-index: 2;
   z-index: 2;
 }
 
 .nav__links {
   display: flex;
-  height: 100%;
-  gap: clamp(1.5rem, 3.5vw, 3rem);
+  gap: 48px;
   height: 100%;
   justify-content: center;
-  grid-column: 3;
-  grid-row: 1;
-  margin-top: 2.5rem;
-  height: 96px;
-  grid-column: 3;
-  grid-row: 1;
-  margin-top: 2.5rem;
-  height: 96px;
-  padding-left: clamp(2rem, 7vw, 7.5rem);
-  padding-right: clamp(2rem, 7vw, 7.5rem);
-  padding-right: clamp(2rem, 7vw, 7.5rem);
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  z-index: 2;
-  z-index: 2;
 }
 
 .nav__link {
@@ -129,7 +100,7 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
-.nav__link b {
+.nav__link a {
   font-weight: 700;
   margin-right: 0.6em;
 }
@@ -147,43 +118,47 @@ html {
   grid-column: 1 / 3;
   grid-row: 2;
   align-self: end;
-  max-width: 450px;
+  max-width: 540px;
   padding-bottom: clamp(3rem, 12vh, 8rem);
 }
 
 .header__text-top {
-  font-family: var(--font-label);
-  font-size: 1.75rem;
-  letter-spacing: 0.17em;
+  width: 540px;
+  font-family: Barlow Condensed;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 4px;
+  font-size: 34px;
   text-transform: uppercase;
   color: var(--color-text);
-  font-family: var(--font-label);
-  font-size: 1.75rem;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
-  color: var(--color-text);
+  margin-top: 289px;
 }
 
 .header__title {
-  font-family: var(--font-heading);
+  width: 540px;
+  font-family: bellefair;
   font-weight: 400;
-  font-size: clamp(5rem, 10.5vw, 9.375rem);
-  line-height: 1.15;
+  font-size: 165px;
+  line-height: 100%;
   text-transform: uppercase;
   color: var(--color-white);
-  font-family: var(--font-heading);
-  font-weight: 400;
-  font-size: clamp(5rem, 10.5vw, 9.375rem);
-  line-height: 1.15;
-  text-transform: uppercase;
-  color: var(--color-white);
+  margin: 24px 0;
+  font-family: Bellefair;
+  font-style: Regular;
+
+
 }
 
-.header__description {
-  margin-top: 1rem;
-  font-size: 1.125rem;
-  line-height: 2;
+.header__description {  
+  width: 540px;
+  height: 96px;  
   color: var(--color-text);
+  font-family: Barlow;
+  font-weight: 400;
+  font-style: Regular;
+  line-height: 180%;
+  letter-spacing: 0px;
+
 }
 
 /* Botão Explore */
@@ -217,4 +192,233 @@ html {
   color: rgba(0, 0, 0, 0.384);
   transform: translateY(-10px);
   transition: all 0.3s ease-in-out;
+}
+.destination{
+  min-height: 100vh;
+  padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 8.5vw, 7.5rem);
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-bg);
+}
+.destination-content{
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(280px, 1fr) minmax(380px, 1.1fr);
+  align-items: center;
+  column-gap: 100px;
+}
+/* A lista de estrelas ocupa o mesmo lugar da lista de planetas.
+   Mostre-a com JS (ex.: classe/estado) quando a aba STARS for ativa. */
+.destination-searchStars__popup {
+  display: none;
+}
+/* ---------- Sidebar (lista) ---------- */
+.destination-searchPlanets__popup {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-self: center;
+}
+.destination-nameList {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.destination-nameList p {
+  padding-bottom: 0.5rem;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(208, 214, 249, 0.6);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.25s, border-color 0.25s;
+}
+.destination-nameList p:first-child {
+  color: var(--color-white);
+  border-bottom-color: var(--color-white);
+}
+.destination-nameList p:hover {
+  color: var(--color-white);
+}
+/* Campo de pesquisa */
+.destination-planets__search {
+  grid-column: 1 / -1;
+  display: block;
+}
+ 
+.destination-planets__iconeSearch {
+  display: block;
+}
+.destination-inputSearch {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.6rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text);
+  background-color: rgba(255, 255, 255, 0.04);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23d0d6f9' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0.9rem center;
+  border: 1px solid rgba(208, 214, 249, 0.2);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+.destination-inputSearch::placeholder {
+  color: rgba(208, 214, 249, 0.6);
+}
+.destination-inputSearch:focus {
+  border-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+/* Selects */
+.destination-searchPlanets__popup select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0.65rem 1.8rem 0.65rem 0.8rem;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  background-color: rgba(255, 255, 255, 0.04);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none' stroke='%23d0d6f9' stroke-width='1.5' stroke-linecap='round'%3E%3Cpath d='m1 1 4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  border: 1px solid rgba(208, 214, 249, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.destination-searchPlanets__popup select:hover,
+.destination-searchPlanets__popup select:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+.destination-searchPlanets__popup select option {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+/* Lista de planetas */
+.destination-nav__listPlanets {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+.destination-nav__listPlanets-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.55rem 0.75rem;
+  list-style: none;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+.destination-nav__listPlanets-item img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.destination-nav__listPlanets-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+ 
+/* Primeiro item = selecionado (como no preview) */
+.destination-nav__listPlanets > div:first-child .destination-nav__listPlanets-item {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(208, 214, 249, 0.3);
+  padding-block: 0.8rem;
+}
+.destination-nav__listPlanets > div:first-child .destination-nav__listPlanets-item::after {
+  content: "\203A";
+  margin-left: auto;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+/* ---------- Imagem central ---------- */
+.destination-content > img {
+  grid-column: 2;
+  justify-self: center;
+  max-width: 520px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* ---------- Dados à direita ---------- */
+.destination-grid__dataStars {
+  grid-column: 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.destination-grid__dataStars > div:first-child {
+  grid-column: 1 / -1;
+  margin-bottom: 0.75rem;
+}
+.destination-grid__dataStars > div:first-child > p:first-child {
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(208, 214, 249, 0.7);
+}
+.destination-grid__dataStars h1 {
+  min-height: 1.1em;
+  margin: 0.5rem 0 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.destination-grid__dataStars > div:first-child > p:last-child {
+  max-width: 46ch;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+/* Cards (divs vazias) */
+.destination-grid__dataStars > div:not(:first-child) {
+  min-height: 76px;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(208, 214, 249, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+/* ---------- Responsivo ---------- */
+@media (max-width: 1100px) {
+  .destination-content {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+ 
+  .destination-searchPlanets__popup,
+  .destination-content > img,
+  .destination-grid__dataStars {
+    grid-column: 1;
+  }
+ 
+  .destination-content > img {
+    max-width: 380px;
+  }
 }
