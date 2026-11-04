@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { measurementSchema } from "./measurement.js";
-import { Star } from "./stars.js";
+import { measurementSchema } from "./measurements.js";
+import Star from "./stars.js";
 
 const planetSchema = new mongoose.Schema(
   {
@@ -15,6 +15,12 @@ const planetSchema = new mongoose.Schema(
       required: true,
       minlength: 2,
       maxlength: 30,
+      enum: ["Terrestrial planet", "Gas giant", "Ice giant", "Dwarf planet"],
+    },
+    slug: {
+      type: String,
+      required: true,
+      unique: true,
     },
     description: {
       type: String,
@@ -37,12 +43,14 @@ const planetSchema = new mongoose.Schema(
     distanceFromEarth: { type: measurementSchema, required: true },
 
     hostStar: {
-      type: String,
-      ref: Star.modelName,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Star",
       required: true,
     },
   },
   { timestamps: true },
 );
 
-export const Planet = mongoose.model("Planet", planetSchema);
+const Planet = mongoose.model("Planet", planetSchema);
+
+export default Planet;

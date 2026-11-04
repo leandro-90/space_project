@@ -1,16 +1,16 @@
 import mongoose from "mongoose";
-import { measurementSchema } from "./measurement.js";
+import { measurementSchema } from "./measurements.js";
 
 const starSchema = new mongoose.Schema({
-  _id: {
-    type: String,
-    lowercase: true,
-    trim: true,
-  },
   name: {
     type: String,
     required: true,
     trim: true,
+  },
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
   },
   mass: {
     type: measurementSchema,
@@ -22,4 +22,6 @@ const starSchema = new mongoose.Schema({
   },
 });
 
-export const Star = mongoose.model("Star", starSchema);
+const Star = mongoose.model("Star", starSchema);
+
+export default Star;
