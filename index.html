@@ -1,314 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Um pequeno projeto sobre o espaço e suas particularidades"
+    />
+    <meta name="keywords" content="HTML5 | CSS3 | JavaScript" />
+    <meta
+      name="author"
+      content="Leandro - Marcela - Nicolas - Wilson - Wederson"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Um pequeno projeto sobre o espaço e suas particularidades">
-  <meta name="keywords" content="HTML5 | CSS3 | JavaScript">
-  <meta name="author" content="Leandro - Marcela - Nicolas - Wilson - Wederson">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow&family=Bellefair&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow&family=Bellefair&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./styles/style.css">
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-
-<body>
-  <header class="header">
-    <img class="nav__logo" src="assets/shared/logo.svg" alt="Ícone de estrela.">
-    <span class="header__line"></span>
-    <nav class="nav">
-      <ul class="nav__links">
-        <li class="nav__link nav__link--active"><a href="#">Home</a></li>
-        <li class="nav__link"><a href="#idestination">Destination</a></li>
-        <li class="nav__link"><a href="#icrew">Crew</a></li>
-        <li class="nav__link"><a href="#itechnology">Technology</a></li>
-      </ul>
-    </nav>
-    <div class="header__content">
-      <div>
-        <p class="header__text-top">So, you want to travel to</p>
-        <h1 class="header__title">Space</h1>
-        <p class="header__description">
-          Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of
-          on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
-        </p>
+  <body>
+    <header class="header">
+      <img
+        class="nav__logo"
+        src="assets/shared/logo.svg"
+        alt="Ícone de estrela."
+      />
+      <span class="header__line"></span>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li class="nav__link nav__link--active"><a href="#">Home</a></li>
+          <li class="nav__link"><a href="#idestination">Destination</a></li>
+          <li class="nav__link"><a href="#icrew">Crew</a></li>
+          <li class="nav__link"><a href="#itechnology">Technology</a></li>
+        </ul>
+      </nav>
+      <div class="header__content">
+        <div>
+          <p class="header__text-top">So, you want to travel to</p>
+          <h1 class="header__title">Space</h1>
+          <p class="header__description">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <a href="#" class="header__explore">Explore</a>
       </div>
-      <a href="#" class="header__explore">Explore</a>
-    </div>
-  </header>
-  <main>
-    <!-- -------------------------------------------- seção destination ------------------------------------------------------------- -->
-    <section class="destination" id="idestination">
-      <div class="destination-content">
-        <!-- Popup dos planetas. -->
-        <div class="destination-searchPlanets__popup">
-          <div class="destination-nameList">
-            <p class="destination-nameList__planets">PLANETS</p>
-            <p class="destination-nameList__plantes">STARS</p>
+    </header>
+    <main>
+      <!-- -------------------------------------------- seção destination ------------------------------------------------------------- -->
+      <section class="destination" id="idestination">
+        <div class="destination-content">
+          <!-- Popup dos planetas. -->
+          <div class="destination-searchPlanets__popup">
+            <div class="destination-nameList">
+              <p class="destination-nameList__planets">PLANETS</p>
+              <p class="destination-nameList__plantes">STARS</p>
+            </div>
+            <!-- Campo de pesquisa da lista PLANETS e STARS. -->
+            <search class="destination-planets__search">
+              <label class="destination-planets__iconeSearch" for="search">
+                <!-- O ícone de pesquisa já está disponível no folder destination. -->
+                <input
+                  class="destination-inputSearch"
+                  id="search"
+                  type="search"
+                  autocomplete="off"
+                  minlength="5"
+                  maxlength="10"
+                  placeholder="Search planets.."
+                />
+                <!-- Leandro: Preciso lembrar de colocar no JS a pesquisa do usuário no campo de leitura mesmo com o nome dos planetas e estrelas em português!!! -->
+              </label>
+            </search>
+            <!-- Pesquisa de planetas por opções selecionadas. -->
+            <select>
+              <!-- Seleção de planetas. -->
+              <option value="All types">All types</option>
+              <option value="mars">mars</option>
+              <option value="earth">earth</option>
+              <option value="jupiter">jupiter</option>
+              <option value="saturn">saturn</option>
+              <option value="uranus">uranus</option>
+              <option value="neptune">neptune</option>
+              <option value="pluto">pluto</option>
+            </select>
+            <select>
+              <!-- Seleção por ordem. -->
+              <option value="Sort by">Sort by</option>
+              <option value="alphabetical order">alphabetical order</option>
+              <option value="ascending order">
+                ascending order of planets
+              </option>
+              <option value="descending order of planets">
+                descending order of planets
+              </option>
+            </select>
+            <nav class="destination-nav__listPlanets">
+              <!-- Lista de planets -->
+              <div>
+                <li class="destination-nav__listPlanets-item">
+                  <img
+                    src="assets/destination/image-mars.png"
+                    alt="Imagem de marte"
+                  />
+                  <p>MARS</p>
+                </li>
+              </div>
+              <div>
+                <li class="destination-nav__listPlanets-item">
+                  <img src="assets/destination/image-earth.png" alt="" />
+                  <p>EARTH</p>
+                </li>
+              </div>
+              <div>
+                <li class="destination-nav__listPlanets-item">
+                  <img src="assets/destination/image-jupiter.png" alt="" />
+                  <p>JUPITER</p>
+                </li>
+              </div>
+              <div>
+                <li class="destination-nav__listPlanets-item">
+                  <img src="assets/destination/image-saturn.png" alt="" />
+                  <p>SATURN</p>
+                </li>
+              </div>
+              <div>
+                <li class="destination-nav__listPlanets-item">
+                  <img src="assets/destination/image-uranus.webp" alt="" />
+                  <p>URANUS</p>
+                </li>
+              </div>
+            </nav>
           </div>
-          <!-- Campo de pesquisa da lista PLANETS e STARS. -->
-          <search class="destination-planets__search">
-            <label class="destination-planets__iconeSearch" for="search">
-              <!-- O ícone de pesquisa já está disponível no folder destination. -->
-              <input class="destination-inputSearch" id="search" type="search" autocomplete="off" minlength="5"
-                maxlength="10" placeholder="Search planets..">
-              <!-- Leandro: Preciso lembrar de colocar no JS a pesquisa do usuário no campo de leitura mesmo com o nome dos planetas e estrelas em português!!! -->
-            </label>
-          </search>
-          <!-- Pesquisa de planetas por opções selecionadas. -->
-          <select>
-            <!-- Seleção de planetas. -->
-            <option value="All types">All types</option>
-            <option value="mars">mars</option>
-            <option value="earth">earth</option>
-            <option value="jupiter">jupiter</option>
-            <option value="saturn">saturn</option>
-            <option value="uranus">uranus</option>
-            <option value="neptune">neptune</option>
-            <option value="pluto">pluto</option>
-          </select>
-          <select>
-            <!-- Seleção por ordem. -->
-            <option value="Sort by">Sort by</option>
-            <option value="alphabetical order">alphabetical order</option>
-            <option value="ascending order">ascending order of planets</option>
-            <option value="descending order of planets">descending order of planets</option>
-          </select>
-          <nav class="destination-nav__listPlanets">
-            <!-- Lista de planets -->
-            <div>
-              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-mars.png"
-                  alt="Imagem de marte">
-                <p>MARS</p>
-              </li>
+          <!-- Popup das estrelas. -->
+          <div class="destination-searchStars__popup">
+            <div class="destination-nameList">
+              <p class="destination-nameList__stars">PLANETS</p>
+              <p class="destination-nameList__stars">STARS</p>
             </div>
-            <div>
-              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-earth.png" alt="">
-                <p>EARTH</p>
-              </li>
-            </div>
-            <div>
-              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-jupiter.png" alt="">
-                <p>JUPITER</p>
-              </li>
-            </div>
-            <div>
-              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-saturn.png" alt="">
-                <p>SATURN</p>
-              </li>
-            </div>
-            <div>
-              <li class="destination-nav__listPlanets-item"><img src="assets/destination/image-uranus.webp" alt="">
-                <p>URANUS</p>
-              </li>
-            </div>
-          </nav>
-        </div>
-        <!-- Popup das estrelas. -->
-        <div class="destination-searchStars__popup">
-          <div class="destination-nameList">
-            <p class="destination-nameList__stars">PLANETS</p>
-            <p class="destination-nameList__stars">STARS</p>
+            <!-- Campo de pesquisa da lista PLANETS e STARS. -->
+            <search class="destination-stars__search">
+              <label class="destination-stars__iconeSearch" for="search">
+                <!-- O ícone de pesquisa já está disponível no folder destination. -->
+                <input
+                  class="destination-inputSearch"
+                  id="search"
+                  type="search"
+                  autocomplete="off"
+                  placeholder="Search stars.."
+                />
+                <!-- Leandro: Preciso lembrar de colocar no JS a pesquisa do usuário no campo de leitura mesmo com o nome dos planetas e estrelas em português!!! -->
+              </label>
+            </search>
+            <!-- Pesquisa de estrelas por opções selecionadas. -->
+            <select>
+              <!-- Seleção de estrelas. -->
+              <option value="All types">All types</option>
+              <option value="sírius">sírius</option>
+              <option value="arcturus">arcturus</option>
+              <option value="sol">sol</option>
+              <option value="rigel">rigel</option>
+              <option value="procyon">procyon</option>
+            </select>
+            <select>
+              <!-- Seleção por ordem. -->
+              <option value="Sort by">Sort by</option>
+              <option value="alphabetical order">alphabetical order</option>
+              <option value="ascending order">ascending order of stars</option>
+              <option value="descending order of stars">
+                descending order of stars
+              </option>
+            </select>
+            <nav class="destination-nav">
+              <!-- Lista de estrelas -->
+              <ul class="destination-nav__listStars">
+                <li class="destination-nav__listStars-item">
+                  <img
+                    src="assets/destination/imagem_png_estrela_sírius_cópia.webp"
+                    alt="Imagem de sírius"
+                  />
+                  <p>SÍRiUS</p>
+                </li>
+                <li class="destination-nav__listStars-item">
+                  <img
+                    src="assets/destination/imagem_estrela_arcturus.webp"
+                    alt="Imagem de arcturus"
+                  />
+                  <p>ARCTURUS</p>
+                </li>
+                <li class="destination-nav__listStars-item">
+                  <img
+                    src="assets/destination/imagem_estrela_sol.png"
+                    alt="imagem do sol"
+                  />
+                  <p>SOL</p>
+                </li>
+                <li class="destination-nav__listStars-item">
+                  <img
+                    src="assets/destination/imagem_estrela_rigel.webp"
+                    alt="Imagem da estrela rigel"
+                  />
+                  <p>RIGEL</p>
+                </li>
+                <li class="destination-nav__listStars-item">
+                  <img
+                    src="assets/destination/imagem_estrela_procyon.webp"
+                    alt="Imagem da estrela procyon"
+                  />
+                  <p>PROCYON</p>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <!-- Campo de pesquisa da lista PLANETS e STARS. -->
-          <search class="destination-stars__search">
-            <label class="destination-stars__iconeSearch" for="search">
-              <!-- O ícone de pesquisa já está disponível no folder destination. -->
-              <input class="destination-inputSearch" id="search" type="search" autocomplete="off"
-                placeholder="Search stars..">
-              <!-- Leandro: Preciso lembrar de colocar no JS a pesquisa do usuário no campo de leitura mesmo com o nome dos planetas e estrelas em português!!! -->
-            </label>
-          </search>
-          <!-- Pesquisa de estrelas por opções selecionadas. -->
-          <select>
-            <!-- Seleção de estrelas. -->
-            <option value="All types">All types</option>
-            <option value="sírius">sírius</option>
-            <option value="arcturus">arcturus</option>
-            <option value="sol">sol</option>
-            <option value="rigel">rigel</option>
-            <option value="procyon">procyon</option>
-          </select>
-          <select>
-            <!-- Seleção por ordem. -->
-            <option value="Sort by">Sort by</option>
-            <option value="alphabetical order">alphabetical order</option>
-            <option value="ascending order">ascending order of stars</option>
-            <option value="descending order of stars">descending order of stars</option>
-          </select>
-          <nav class="destination-nav">
-            <!-- Lista de estrelas -->
-            <ul class="destination-nav__listStars">
-              <li class="destination-nav__listStars-item"><img
-                  src="assets/destination/imagem_png_estrela_sírius_cópia.webp" alt="Imagem de sírius">
-                <p>SÍRiUS</p>
-              </li>
-              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_arcturus.webp"
-                  alt="Imagem de arcturus">
-                <p>ARCTURUS</p>
-              </li>
-              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_sol.png"
-                  alt="imagem do sol">
-                <p>SOL</p>
-              </li>
-              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_rigel.webp"
-                  alt="Imagem da estrela rigel">
-                <p>RIGEL</p>
-              </li>
-              <li class="destination-nav__listStars-item"><img src="assets/destination/imagem_estrela_procyon.webp"
-                  alt="Imagem da estrela procyon">
-                <p>PROCYON</p>
-              </li>
-            </ul>
-          </nav>
+          <img
+            src="assets/destination/image-mars.png"
+            alt="Foto ilustrativa da estrela sírius"
+          />
+          <!-- Aqui vai ficar a imagem do planeta atual. -->
+          <div class="destination-grid__dataPlanet">
+            <!-- Aqui ficará os dados do planeta atual. -->
+            <div class="destination-grid__childElement_grid">
+              <p class="destination_grid__titlePlanet">PLANET</p>
+              <h1 class="destination-grid__namePlanet">MARS</h1>
+              <p class="destination-grid__descriptionPlanet">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora, odit inventore dolores sapiente sunt, soluta explicabo
+                quas velit cupiditate maiores temporibus asperiores, beatae
+                facilis accusantium id atque alias reiciendis in.
+              </p>
+            </div>
+            <div class="destination-grid__childElement-grid">
+              <div>
+                <img src="" alt="" />logo
+                <p>type</p>
+                <p>Terrestrial planet</p>
+              </div>
+              <div>
+                <img src="" alt="" />logo
+                <p>texto</p>
+                <p>texto</p>
+              </div>
+            </div>
+            <div>
+              <img src="" alt="" />logo
+              <p>texto</p>
+              <p>texto</p>
+            </div>
+            <div>
+              <img src="" alt="" />logo
+              <p>texto</p>
+              <p>texto</p>
+            </div>
+            <div>
+              <img src="" alt="" />logo
+              <p>texto</p>
+              <p>texto</p>
+            </div>
+            <div>
+              <img src="" alt="" />logo
+              <p>texto</p>
+              <p>texto</p>
+            </div>
+            <div>
+              <img src="" alt="" />logo
+              <p>texto</p>
+              <p>texto</p>
+            </div>
+            <div>
+              <img src="" alt="" />logo
+              <p>texto</p>
+              <p>texto</p>
+            </div>
+            <div>
+              <img src="" alt="" />logo
+              <p>texto</p>
+              <p>texto</p>
+            </div>
+          </div>
         </div>
-        <img src="assets/destination/image-mars.png" alt="Foto ilustrativa da estrela sírius">
-        <!-- Aqui vai ficar a imagem do planeta atual. -->
-        <div class="destination-grid__dataPlanet">
-          <!-- Aqui ficará os dados do planeta atual. -->
-          <div class="destination-grid__childElement_grid">
-            <p class="destination_grid__titlePlanet">PLANET</p>
-            <h1 class="destination-grid__namePlanet">MARS</h1>
-            <p class="destination-grid__descriptionPlanet">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, odit inventore dolores sapiente
-              sunt,
-              soluta explicabo quas velit cupiditate maiores temporibus asperiores, beatae facilis accusantium id
-              atque
-              alias reiciendis in.
+      </section>
+      <!-- --------------------------------------------- seção crew ------------------------------------------------------------ -->
+      <section class="crew" id="icrew">
+        <div class="crew-content">
+          <h3>MEET YOUR CREW</h3>
+          <div class="crew__popup">
+            <h2 class="crew__profission">subtitle</h2>
+            <h1 class="crew__name">title</h1>
+            <p class="crew__presentation">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
+              aspernatur rerum saepe soluta voluptate perferendis et natus ab in
+              voluptates dolor tempore!
             </p>
           </div>
-          <div class="destination-grid__childElement-grid">
-            <div>
-              <img src="" alt="">logo
-              <p>type</p>
-              <p>Terrestrial planet</p>
-            </div>
-            <div>
-              <img src="" alt="">logo
-              <p>texto</p>
-              <p>texto</p>
-            </div>
+          <nav class="crew__buttons-scroll">
+            <div class="crew__button"></div>
+            <div class="crew__button"></div>
+            <div class="crew__button"></div>
+            <div class="crew__button"></div>
+          </nav>
+          <img
+            class="crew__popup"
+            src="assets/crew/image-anousheh-ansari.png"
+            alt=""
+          />
+          <div class="crew__popup">
+            <h2 class="crew__profission">subtitle</h2>
+            <h1 class="crew__name">title</h1>
+            <p class="crew__presentation">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
+              aspernatur rerum saepe soluta voluptate perferendis et natus ab in
+              voluptates dolor tempore!
+            </p>
           </div>
-          <div>
-            <img src="" alt="">logo
-            <p>texto</p>
-            <p>texto</p>
+          <img class="crew__popup" src="" alt="" />
+          <div class="crew__popup">
+            <h2 class="crew__profission">subtitle</h2>
+            <h1 class="crew__name">title</h1>
+            <p class="crew__presentation">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
+              aspernatur rerum saepe soluta voluptate perferendis et natus ab in
+              voluptates dolor tempore!
+            </p>
           </div>
-          <div>
-            <img src="" alt="">logo
-            <p>texto</p>
-            <p>texto</p>
+          <img class="crew__popup" src="" alt="" />
+          <div class="crew__popup">
+            <h2 class="crew__profission">subtitle</h2>
+            <h1 class="crew__name">title</h1>
+            <p class="crew__presentation">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
+              aspernatur rerum saepe soluta voluptate perferendis et natus ab in
+              voluptates dolor tempore!
+            </p>
           </div>
-          <div>
-            <img src="" alt="">logo
-            <p>texto</p>
-            <p>texto</p>
-          </div>
-          <div>
-            <img src="" alt="">logo
-            <p>texto</p>
-            <p>texto</p>
-          </div>
-          <div>
-            <img src="" alt="">logo
-            <p>texto</p>
-            <p>texto</p>
-          </div>
-          <div>
-            <img src="" alt="">logo
-            <p>texto</p>
-            <p>texto</p>
-          </div>
-          <div>
-            <img src="" alt="">logo
-            <p>texto</p>
-            <p>texto</p>
-          </div>
+          <img class="crew__popup" src="" alt="" />
         </div>
-      </div>
-    </section>
-    <!-- --------------------------------------------- seção crew ------------------------------------------------------------ -->
-    <section class="crew" id="icrew">
-      <div class="crew-content">
-        <h3>MEET YOUR CREW</h3>
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias harum quidem
-            maiores,
-            laudantium est
-            reprehenderit, itaque, fugiat aspernatur rerum saepe soluta voluptate perferendis et natus ab in voluptates
-            dolor tempore!</p>
-        </div>
-        <nav class="crew__buttons-scroll">
-          <div class="crew__button">
+      </section>
+      <!-- --------------------------------------------- seção technology ------------------------------------------------------------ -->
+      <section class="technology" id="itechnology">
+        <div class="technology-content">
+          <h2 class="technology__title-page">texto</h2>
+          <nav class="technology__nav-scrollNumbers">
+            <div class="technology__nav-scrollNumber">1</div>
+            <div class="technology__nav-scrollNumber">2</div>
+            <div class="technology__nav-scrollNumber">3</div>
+          </nav>
+          <div class="technology__textGroup">
+            <p class="technology__subtitle">texto</p>
+            <h1 class="technology__title">title</h1>
+            <p class="technology__text">texto</p>
           </div>
-          <div class="crew__button">
-          </div>
-          <div class="crew__button">
-          </div>
-          <div class="crew__button">
-          </div>
-        </nav>
-        <img class="crew__popup" src="assets/crew/image-anousheh-ansari.png" alt="">
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias harum quidem
-            maiores,
-            laudantium est
-            reprehenderit, itaque, fugiat aspernatur rerum saepe soluta voluptate perferendis et natus ab in voluptates
-            dolor tempore!</p>
+          <img
+            class="technology__image"
+            src="assets/technology/image-launch-vehicle-portrait.jpg"
+            alt=""
+          />
         </div>
-        <img class="crew__popup" src="" alt="">
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias harum quidem
-            maiores,
-            laudantium est
-            reprehenderit, itaque, fugiat aspernatur rerum saepe soluta voluptate perferendis et natus ab in voluptates
-            dolor tempore!</p>
-        </div>
-        <img class="crew__popup" src="" alt="">
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias harum quidem
-            maiores,
-            laudantium est
-            reprehenderit, itaque, fugiat aspernatur rerum saepe soluta voluptate perferendis et natus ab in voluptates
-            dolor tempore!</p>
-        </div>
-        <img class="crew__popup" src="" alt="">
-      </div>
-    </section>
-    <!-- --------------------------------------------- seção technology ------------------------------------------------------------ -->
-    <section class="technology" id="itechnology">
-      <div class="technology-content">
-        <h2 class="technology__title-page">texto</h2>
-        <nav class="technology__nav-scrollNumbers">
-          <div class="technology__nav-scrollNumber">1</div>
-          <div class="technology__nav-scrollNumber">2</div>
-          <div class="technology__nav-scrollNumber">3</div>
-        </nav>
-        <div class="technology__textGroup">
-          <p class="technology__subtitle">texto</p>
-          <h1 class="technology__title">title</h1>
-          <p class="technology__text">texto</p>
-        </div>
-        <img class="technology__image" src="assets/technology/image-launch-vehicle-portrait.jpg" alt="">
-      </div>
-    </section>
-  </main>
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>
