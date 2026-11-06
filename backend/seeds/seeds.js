@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 import fs from "fs/promises";
 import path from "path";
 import "dotenv/config";
-import { Planet } from "../src/models/planets.js";
-import { Star } from "../src/models/stars.js";
+import Planet from "../src/models/planets.js";
+import Star from "../src/models/stars.js";
 
 const uri = process.env.MONGO_URI;
 

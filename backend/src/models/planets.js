@@ -47,6 +47,10 @@ const planetSchema = new mongoose.Schema(
       ref: "Star",
       required: true,
     },
+    images: {
+      thumbnail: { type: String, required: true },
+      full: { type: String, required: true },
+    },
   },
   { timestamps: true },
 );

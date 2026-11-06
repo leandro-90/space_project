@@ -3,114 +3,190 @@
     "name": "Sun",
     "slug": "sun",
     "mass": { "value": 1, "unit": "M☉" },
-    "temperature": { "value": 5772, "unit": "K" }
+    "temperature": { "value": 5772, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Sirius",
     "slug": "sirius",
     "mass": { "value": 2.06, "unit": "M☉" },
-    "temperature": { "value": 9940, "unit": "K" }
+    "temperature": { "value": 9940, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sirius.webp",
+      "full": "/images/stars/sirius.webp"
+    }
   },
   {
     "name": "Canopus",
     "slug": "canopus",
     "mass": { "value": 8, "unit": "M☉" },
-    "temperature": { "value": 7400, "unit": "K" }
+    "temperature": { "value": 7400, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Alpha Centauri",
     "slug": "alpha-centauri",
     "mass": { "value": 1.08, "unit": "M☉" },
-    "temperature": { "value": 5790, "unit": "K" }
+    "temperature": { "value": 5790, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Proxima Centauri",
     "slug": "proxima-centauri",
     "mass": { "value": 0.122, "unit": "M☉" },
-    "temperature": { "value": 3042, "unit": "K" }
+    "temperature": { "value": 3042, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Arcturus",
     "slug": "arcturus",
     "mass": { "value": 1.08, "unit": "M☉" },
-    "temperature": { "value": 4286, "unit": "K" }
+    "temperature": { "value": 4286, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/arcturus.webp",
+      "full": "/images/stars/arcturus.webp"
+    }
   },
   {
     "name": "Vega",
     "slug": "vega",
     "mass": { "value": 2.14, "unit": "M☉" },
-    "temperature": { "value": 9602, "unit": "K" }
+    "temperature": { "value": 9602, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Capella",
     "slug": "capella",
     "mass": { "value": 2.57, "unit": "M☉" },
-    "temperature": { "value": 4970, "unit": "K" }
+    "temperature": { "value": 4970, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Rigel",
     "slug": "rigel",
     "mass": { "value": 21, "unit": "M☉" },
-    "temperature": { "value": 12100, "unit": "K" }
+    "temperature": { "value": 12100, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/rigel.webp",
+      "full": "/images/stars/rigel.webp"
+    }
   },
   {
     "name": "Procyon",
     "slug": "procyon",
     "mass": { "value": 1.48, "unit": "M☉" },
-    "temperature": { "value": 6530, "unit": "K" }
+    "temperature": { "value": 6530, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/procycon.webp",
+      "full": "/images/stars/procycon.webp"
+    }
   },
   {
     "name": "Betelgeuse",
     "slug": "betelgeuse",
     "mass": { "value": 16.5, "unit": "M☉" },
-    "temperature": { "value": 3600, "unit": "K" }
+    "temperature": { "value": 3600, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Altair",
     "slug": "altair",
     "mass": { "value": 1.86, "unit": "M☉" },
-    "temperature": { "value": 7670, "unit": "K" }
+    "temperature": { "value": 7670, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Aldebaran",
     "slug": "aldebaran",
     "mass": { "value": 1.16, "unit": "M☉" },
-    "temperature": { "value": 3900, "unit": "K" }
+    "temperature": { "value": 3900, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Antares",
     "slug": "antares",
     "mass": { "value": 12, "unit": "M☉" },
-    "temperature": { "value": 3660, "unit": "K" }
+    "temperature": { "value": 3660, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Spica",
     "slug": "spica",
     "mass": { "value": 11.4, "unit": "M☉" },
-    "temperature": { "value": 25300, "unit": "K" }
+    "temperature": { "value": 25300, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Pollux",
     "slug": "pollux",
     "mass": { "value": 1.91, "unit": "M☉" },
-    "temperature": { "value": 4586, "unit": "K" }
+    "temperature": { "value": 4586, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Deneb",
     "slug": "deneb",
     "mass": { "value": 19, "unit": "M☉" },
-    "temperature": { "value": 8525, "unit": "K" }
+    "temperature": { "value": 8525, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Regulus",
     "slug": "regulus",
     "mass": { "value": 3.8, "unit": "M☉" },
-    "temperature": { "value": 12460, "unit": "K" }
+    "temperature": { "value": 12460, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   },
   {
     "name": "Polaris",
     "slug": "polaris",
     "mass": { "value": 5.4, "unit": "M☉" },
-    "temperature": { "value": 6015, "unit": "K" }
+    "temperature": { "value": 6015, "unit": "K" },
+    "images": {
+      "thumbnail": "/images/stars/sun.png",
+      "full": "/images/stars/sun.png"
+    }
   }
 ]

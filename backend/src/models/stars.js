@@ -20,6 +20,10 @@ const starSchema = new mongoose.Schema({
     type: measurementSchema,
     required: true,
   },
+  images: {
+    thumbnail: { type: String, required: true },
+    full: { type: String, required: true },
+  },
 });
 
 const Star = mongoose.model("Star", starSchema);
