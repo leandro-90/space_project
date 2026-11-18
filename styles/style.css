@@ -29,7 +29,6 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
 }
-
 /* ================= HEADER ================= */
 .header {
   position: relative;
@@ -47,8 +46,6 @@ body {
 
 /* Logo */
 .nav__logo {
-  grid-column: 1;
-  grid-row: 1;
   margin: 64px 0 24px 64px;
   width: 48px;
   height: 48px;
@@ -56,8 +53,6 @@ body {
 
 /* Linha ao lado do logo */
 .header__line {
-  grid-column: 2;
-  grid-row: 1;
   align-self: center;
   margin-top: 40px;
   height: 1px;
@@ -70,8 +65,6 @@ body {
 
 /* Menu */
 .nav {
-  grid-column: 3;
-  grid-row: 1;
   height: 96px;
   padding-left: 127px;
   padding-right: 64px;
@@ -121,12 +114,11 @@ body {
   grid-column: 1 / 3;
   grid-row: 2;
   align-self: end;
-  max-width: 540px;
-  padding-bottom: clamp(3rem, 12vh, 8rem);
+  width: 100%;
 }
 
 .header__text-top {
-  width: 540px;
+  width: 100%;
   font-family: Barlow Condensed;
   font-weight: 400;
   line-height: 100%;
@@ -138,7 +130,7 @@ body {
 }
 
 .header__title {
-  width: 540px;
+  width: 100%;
   font-family: bellefair;
   font-weight: 400;
   font-size: 165px;
@@ -151,7 +143,7 @@ body {
 }
 
 .header__description {
-  width: 540px;
+  width: 100%;
   height: 96px;
   color: var(--color-text);
   font-family: Barlow;
@@ -429,5 +421,288 @@ body {
 
   .destination-content > img {
     max-width: 380px;
+  }
+}
+/* ==========================================================
+   COLE ESTE BLOCO NO FINAL DO style.css
+   (apague antes os antigos .crew{...} e .crew-content{...})
+   ========================================================== */
+
+/* ================= CREW ================= */
+.crew {
+  min-height: 100vh;
+  padding: 212px clamp(2rem, 8.5vw, 7.5rem) 0;
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+.crew__content {
+  max-width: 1110px;
+  height: 680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "title title"
+    "text  image"
+    "dots  image";
+  column-gap: 24px;
+}
+
+/* "02 MEET YOUR CREW" */
+.crew-title,
+.crew__title {
+  grid-area: title;
+  font-family: var(--font-label);
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.crew-title span,
+.crew__title span {
+  margin-right: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Texto */
+.crew__popup {
+  grid-area: text;
+  align-self: center;
+  max-width: 444px;
+}
+.crew__profission {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.crew__name {
+  margin: 15px 0 27px;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.crew__presentation {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 180%;
+  color: var(--color-text);
+}
+
+/* Bolinhas */
+.crew__buttons-scroll {
+  grid-area: dots;
+  align-self: end;
+  display: flex;
+  gap: 24px;
+  padding-bottom: 94px;
+}
+.crew__button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-white);
+  opacity: 0.17;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.crew__button:hover {
+  opacity: 0.5;
+}
+.crew__button--active {
+  opacity: 1;
+}
+
+/* Foto do tripulante */
+.crew__image {
+  grid-area: image;
+  align-self: end;
+  justify-self: center;
+  height: 100%;
+  max-height: 680px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+/* ================= TECHNOLOGY ================= */
+.technology {
+  min-height: 100vh;
+  padding: 212px 0 0 clamp(2rem, 8.5vw, 7.5rem);
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+.technology-content {
+  display: grid;
+  grid-template-columns: 80px minmax(280px, 470px) 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "title title title"
+    "nums  text  image";
+  column-gap: 80px;
+  align-items: center;
+}
+
+/* "03 SPACE LAUNCH 101" */
+.technology__title-page {
+  grid-area: title;
+  align-self: start;
+  margin-bottom: 26px;
+  font-family: var(--font-label);
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.technology__title-page span {
+  margin-right: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Círculos numerados */
+.technology__nav-scrollNumbers {
+  grid-area: nums;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.technology__nav-scrollNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: var(--font-heading);
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+.technology__nav-scrollNumber:hover {
+  border-color: var(--color-white);
+}
+.technology__nav-scrollNumber--active {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: var(--color-white);
+}
+
+/* Texto */
+.technology__textGroup {
+  grid-area: text;
+}
+.technology__subtitle {
+  font-family: var(--font-label);
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+.technology__title {
+  margin: 11px 0 17px;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.technology__text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 180%;
+  color: var(--color-text);
+}
+
+/* Imagem encostada na borda direita */
+.technology__image {
+  grid-area: image;
+  justify-self: end;
+  width: 100%;
+  max-width: 515px;
+  height: 527px;
+  object-fit: cover;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 1100px) {
+  .crew,
+  .technology {
+    padding-top: 140px;
+  }
+
+  .crew__content {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "text"
+      "dots"
+      "image";
+    text-align: center;
+    row-gap: 2rem;
+  }
+  .crew__popup {
+    justify-self: center;
+  }
+  .crew__buttons-scroll {
+    justify-content: center;
+    padding-bottom: 0;
+  }
+  .crew__image {
+    max-height: 420px;
+  }
+
+  .technology {
+    padding-right: clamp(2rem, 8.5vw, 7.5rem);
+  }
+  .technology-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "image"
+      "nums"
+      "text";
+    row-gap: 2rem;
+    text-align: center;
+    justify-items: center;
+  }
+  .technology__nav-scrollNumbers {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .technology__nav-scrollNumber {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+  }
+  .technology__image {
+    justify-self: center;
+    height: 300px;
   }
 }

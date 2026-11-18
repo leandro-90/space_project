@@ -22,21 +22,16 @@
 
 <body>
   <header class="header">
-    <div class="header__blockNav-fixed">
-      <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-      <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-      <!-- Essa parte do cabeçalho, onde tem a nav logo e o bloco nav, ficarão fixados na página, por isso a necessiaade de um bloco div. -->
-      <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-      <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-      <img class="nav__logo" src="assets/shared/logo.svg" alt="Ícone de estrela." />
-      <span class="header__line"></span>
-      <nav class="nav">
-        <ul class="nav__links">
-          <li class="nav__link"><a href="#">Home</a></li>
-          <li class="nav__link"><a href="#idestination">Destination</a></li>
-          <li class="nav__link"><a href="#icrew">Crew</a></li>
-          <li class="nav__link"><a href="#itechnology">Technology</a></li>
-        </ul>
+  <img class="nav__logo" src="assets/shared/logo.svg" alt="Ícone de estrela." />
+    <span class="header__line"></span>
+    <nav class="nav">
+      <ul class="nav__links">
+        <li class="nav__link"><a href="#">Home</a></li>
+        <li class="nav__link"><a href="#idestination">Destination</a></li>
+        <li class="nav__link"><a href="#icrew">Crew</a></li>
+        <li class="nav__link"><a href="#itechnology">Technology</a></li>
+      </ul>
+      <div class="header__blockNav-fixed">
       </nav>
     </div>
     <div class="header__content">
@@ -64,10 +59,14 @@
           <!-- Campo de pesquisa da lista PLANETS e STARS. -->
           <search class="destination-planets__search">
             <label class="destination-planets__iconeSearch" for="search">
-              <!-- O ícone de pesquisa já está disponível no folder destination. -->
-              <input class="destination-inputSearch" id="search" type="search" autocomplete="off" minlength="5"
-                maxlength="10" placeholder="Search planets.." />
-              <!-- Leandro: Preciso lembrar de colocar no JS a pesquisa do usuário no campo de leitura mesmo com o nome dos planetas e estrelas em português!!! -->
+              <input 
+              class="destination-inputSearch" 
+              id="search" 
+              type="search" 
+              autocomplete="off" 
+              minlength="5"
+              maxlength="10" 
+              placeholder="Search planets.."/>
             </label>
           </search>
           <!-- Pesquisa de planetas por opções selecionadas. -->
@@ -118,17 +117,9 @@
             </li>
           </ul>
         </div>
-        <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-        <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-        <!-- MENSAGEM: Vou alterar os arquivos, como as imagens, nomes e outros dos planetas para estrelas, usando JavaScript, então, tomei a liberdade de remover o bloco HTML atual do popup stars. Caso ainda tenha algum seletor relativo aos blocos das estrelas, pode remover também no arquivo CSS. Obrigado pela compreensão. CASO NÃO TENHA ENTENDIDO MINHA MENSAGEM E O MOTIVO DA REMOÇÃO, PODEMOS MARCAR PARA CONVERSAR E NOS ALINHAR. Thanks for your attention. -->
-        <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-        <!-- ------------------------------------------------------------------------------------------------------------------------- -->
         <img class="destination__imageMain" src="assets/destination/image-mars.png"
           alt="Foto ilustrativa da estrela sírius" />
-        <!-- Aqui vai ficar a imagem do planeta atual. -->
-        <!-- NOTA: Também vou alterar esse arquivo de imagem usando JavaScript. -->
         <div class="destination-grid__dataPlanet">
-          <!-- Aqui ficará os dados do planeta atual. -->
           <div class="destination-grid__childElement_grid">
             <p class="destination_grid__titlePlanet">PLANET</p>
             <h1 class="destination-grid__namePlanet">MARS</h1>
@@ -191,73 +182,42 @@
     </section>
     <!-- --------------------------------------------- seção crew ------------------------------------------------------------ -->
     <section class="crew" id="icrew">
-      <div class="crew-content">
-        <h3>MEET YOUR CREW</h3>
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
-            aspernatur rerum saepe soluta voluptate perferendis et natus ab in
-            voluptates dolor tempore!
-          </p>
+      <div class="crew__content">
+        <div class="crew-title">
+          <h3>MEET YOUR CREW</h3>
+            <div class="crew__popup">
+              <h2 class="crew__profission">Commander</h2>
+              <h1 class="crew__name">Douglas Hurley</h1>
+              <p class="crew__presentation">
+            Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+              </p>
+            </div>
+          </div>
         </div>
+        <img class="crew__popup" src="assets/crew/image-douglas-hurley.png" alt="" />
+        <div class="crew__popup">
         <nav class="crew__buttons-scroll">
-          <div class="crew__button"></div>
-          <div class="crew__button"></div>
-          <div class="crew__button"></div>
-          <div class="crew__button"></div>
+            <div class="crew__button"></div>
+            <div class="crew__button"></div>
+            <div class="crew__button"></div>
+            <div class="crew__button"></div>
         </nav>
-        <img class="crew__popup" src="assets/crew/image-anousheh-ansari.png" alt="" />
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
-            aspernatur rerum saepe soluta voluptate perferendis et natus ab in
-            voluptates dolor tempore!
-          </p>
-        </div>
-        <img class="crew__popup" src="" alt="" />
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
-            aspernatur rerum saepe soluta voluptate perferendis et natus ab in
-            voluptates dolor tempore!
-          </p>
-        </div>
-        <img class="crew__popup" src="" alt="" />
-        <div class="crew__popup">
-          <h2 class="crew__profission">subtitle</h2>
-          <h1 class="crew__name">title</h1>
-          <p class="crew__presentation">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            harum quidem maiores, laudantium est reprehenderit, itaque, fugiat
-            aspernatur rerum saepe soluta voluptate perferendis et natus ab in
-            voluptates dolor tempore!
-          </p>
-        </div>
         <img class="crew__popup" src="" alt="" />
       </div>
     </section>
     <!-- --------------------------------------------- seção technology ------------------------------------------------------------ -->
     <section class="technology" id="itechnology">
       <div class="technology-content">
-        <h2 class="technology__title-page">texto</h2>
+        <h2 class="technology__title-page">SPACE LAUNCH 101</h2>
         <nav class="technology__nav-scrollNumbers">
           <div class="technology__nav-scrollNumber">1</div>
           <div class="technology__nav-scrollNumber">2</div>
           <div class="technology__nav-scrollNumber">3</div>
         </nav>
         <div class="technology__textGroup">
-          <p class="technology__subtitle">texto</p>
-          <h1 class="technology__title">title</h1>
-          <p class="technology__text">texto</p>
+          <p class="technology__subtitle">THE TERMINOLOGY…</p>
+          <h1 class="technology__title">LAUNCH VEHICLE</h1>
+          <p class="technology__text">tA launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
         </div>
         <img class="technology__image" src="assets/technology/image-launch-vehicle-portrait.jpg" alt="" />
       </div>
