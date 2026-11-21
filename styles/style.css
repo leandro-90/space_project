@@ -40,48 +40,51 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* conteúdo colado embaixo */
   background-image: url("../assets/home/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
 }
 
+.logo {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
 .nav__logo {
-  position: absolute;
-  top: 64px;
-  left: 64px;
   width: 48px;
   height: 48px;
+  flex-shrink: 0;
 }
 
 .header__line {
-  position: absolute;
-  top: 88px;       
-  left: 176px;     
+  flex-shrink: 0;
   width: 560px;
   height: 1px;
   background: var(--color-white);
   opacity: 0.25;
-  z-index: 3;
+  pointer-events: none;
 }
 
 .nav {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  height: 96px;
-  padding: 0 64px 0 127px;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  z-index: 2;
+  display: flex;
+  margin-top: 40px;
+  padding-left: 64px;
+  align-items: center;
 }
 
 .nav__links {
+  width: 100%;
+  height: 96px;
+  position: relative;
+  z-index: 2;
   display: flex;
   gap: 48px;
-  height: 100%;
-  justify-content: center;
+  padding: 0 64px 0 159px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   counter-reset: nav -1;
 }
 
@@ -107,12 +110,18 @@ body {
   border-color: var(--color-white);
 }
 
+.content {
+  max-width: 1440px;
+  height: 888px;
+  margin: 128px 165px;
+}
 .header__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  padding: 0 0 131px 165px;
+width: 1110;
+height: 632;
+max-width: 1110px;
+gap: 48;
+opacity: 1;
+padding: 289px 0 0;
 }
 
 .header__text-top {
